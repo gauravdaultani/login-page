@@ -33,3 +33,28 @@
         </form>
 
     </div>
+    <script>
+        
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username.trim() === "" || password.trim() === "") {
+            alert("Please enter both username and password");
+            return;
+        }
+        if (password.length < 8) {
+            alert("Password must be at least 8 characters long");
+            return;
+        }
+        if (!isValidEmail(username)) {
+            alert("Please enter a valid email address as the username");
+            return;
+        }
+
+        alert("Login successful!");
+    }
+
+    </script>
+</body>
+</html>
